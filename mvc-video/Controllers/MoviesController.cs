@@ -74,7 +74,7 @@ namespace mvc_video.Controllers
             return Json(movie);
         }
         [HttpPost]
-        public IActionResult Guncelleme (Movies movie)
+        public IActionResult Update (Movies movie)
         {
             if (ModelState.IsValid)
             {
