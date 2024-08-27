@@ -1,0 +1,38 @@
+﻿@model Movies
+
+@{
+    ViewData["Title"] = "Create Movie";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="CreateMovie" method="post">
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label asp-for="MovieTitle" class="control-label"></label>
+        <input asp-for="MovieTitle" class="form-control" />
+        <span asp-validation-for="MovieTitle" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MovieDescription" class="control-label"></label>
+        <textarea asp-for="MovieDescription" class="form-control"></textarea>
+        <span asp-validation-for="MovieDescription" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Director" class="control-label"></label>
+        <input asp-for="Director" class="form-control" />
+        <span asp-validation-for="Director" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MovieDate" class="control-label"></label>
+        <input asp-for="MovieDate" class="form-control" type="date" />
+        <span asp-validation-for="MovieDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create Movie</button>
+    </div>
+</form>
+
+
