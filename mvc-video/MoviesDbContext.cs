@@ -1,5 +1,4 @@
 ﻿    using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore;
 using mvc_video.Models;
 namespace mvc_video
 {
